@@ -26,6 +26,10 @@
                 </div>
             </div>
             <p class='text-gray-100 text-opacity-40 max-w-3xl font-light max-sm:text-sm'>This is my beautiful website using Vue.js and TailwindCSS! There's nothing interesting to see here, just some Vue.js features.</p>
+            <div class='flex flex-col items-center text-center my-20 mb-0 text-gray-100'>
+                <p class='font-semibold text-3xl mb-7 max-sm:text-2xl'>Count is {{ number }}</p>
+                <button class='bg-gray-100 bg-opacity-5 py-3 px-5 rounded-md text-sm hover:bg-opacity-10 active:bg-opacity-5' @click="number++">Click me!</button>
+            </div>
         </div>
     </header>
 </template>
@@ -36,7 +40,8 @@
         data(){
             return {
                 name: '{{ name }}',
-                darkMode: false
+                darkMode: false,
+                number: 0,
             }
         },
         methods: {
